@@ -18,7 +18,6 @@ from pathlib import Path
 import lightgbm as lgb
 import numpy as np
 import pandas as pd
-from sklearn.metrics import average_precision_score, roc_auc_score
 
 from . import features as F
 from .features import CATEGORICAL, FEATURES, build_features
@@ -67,6 +66,7 @@ def load_callcloud(path: str, carriers: str | None = "data/carriers.csv", transc
 
 
 def report(name: str, y: np.ndarray, p: np.ndarray, ws: np.ndarray | None = None) -> dict:
+    from sklearn.metrics import average_precision_score, roc_auc_score  # evaluation only: scoring never needs sklearn
     if len(y) == 0 or y.min() == y.max():
         return {"split": name, "n": int(len(y))}
     order = np.argsort(-p)
