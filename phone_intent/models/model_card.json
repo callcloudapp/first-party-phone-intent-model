@@ -1,0 +1,219 @@
+{
+ "target": "a real person answers the dial",
+ "dials": 394581,
+ "people": 29441,
+ "features": [
+  "country",
+  "npa",
+  "state",
+  "local_hour",
+  "local_weekday",
+  "caller_same_npa",
+  "caller_same_state",
+  "prior_tries",
+  "prior_person",
+  "prior_no_person",
+  "prior_dead",
+  "prior_person_rate",
+  "hours_since_last",
+  "days_since_first",
+  "days_since_last_person",
+  "days_since_last_miss",
+  "tries_30d",
+  "person_30d",
+  "decayed_person_rate",
+  "person_near_hour",
+  "person_same_weekday"
+ ],
+ "trained_through": "2026-10-17 21:42:07.202000+00:00",
+ "evaluation": [
+  {
+   "split": "newest weeks, known customers",
+   "n": 139485,
+   "people": 8689,
+   "base_rate": 0.0623,
+   "auc": 0.6524,
+   "pr_auc": 0.1098,
+   "people_in_top10pct": 0.2,
+   "people_in_top20pct": 0.348,
+   "within_customer_auc": 0.6411,
+   "customers": 19
+  },
+  {
+   "split": "unseen customers (all dates)",
+   "n": 23346,
+   "people": 2539,
+   "base_rate": 0.1088,
+   "auc": 0.6151,
+   "pr_auc": 0.1662,
+   "people_in_top10pct": 0.185,
+   "people_in_top20pct": 0.332,
+   "within_customer_auc": 0.6111,
+   "customers": 4
+  },
+  {
+   "split": "unseen customers, first dial of a number",
+   "n": 15585,
+   "people": 1714,
+   "base_rate": 0.11,
+   "auc": 0.5474,
+   "pr_auc": 0.1235,
+   "people_in_top10pct": 0.121,
+   "people_in_top20pct": 0.261,
+   "within_customer_auc": 0.5411,
+   "customers": 4
+  },
+  {
+   "split": "newest weeks, first dial of a number",
+   "n": 73999,
+   "people": 6104,
+   "base_rate": 0.0825,
+   "auc": 0.5742,
+   "pr_auc": 0.1023,
+   "people_in_top10pct": 0.142,
+   "people_in_top20pct": 0.272,
+   "within_customer_auc": 0.5667,
+   "customers": 14
+  },
+  {
+   "split": "newest weeks, numbers with history",
+   "n": 65486,
+   "people": 2585,
+   "base_rate": 0.0395,
+   "auc": 0.6812,
+   "pr_auc": 0.1098,
+   "people_in_top10pct": 0.258,
+   "people_in_top20pct": 0.403,
+   "within_customer_auc": 0.674,
+   "customers": 9
+  },
+  {
+   "split": "unseen customers, numbers with history",
+   "n": 7761,
+   "people": 825,
+   "base_rate": 0.1063,
+   "auc": 0.7087,
+   "pr_auc": 0.2224,
+   "people_in_top10pct": 0.268,
+   "people_in_top20pct": 0.478,
+   "within_customer_auc": 0.7102,
+   "customers": 2
+  },
+  {
+   "split": "newest weeks, number has a carrier lookup",
+   "n": 138871,
+   "people": 8496,
+   "base_rate": 0.0612,
+   "auc": 0.651,
+   "pr_auc": 0.1079,
+   "people_in_top10pct": 0.2,
+   "people_in_top20pct": 0.347,
+   "within_customer_auc": 0.6391,
+   "customers": 18
+  },
+  {
+   "split": "newest weeks, first dial WITH a carrier lookup",
+   "n": 73437,
+   "people": 5920,
+   "base_rate": 0.0806,
+   "auc": 0.5728,
+   "pr_auc": 0.0997,
+   "people_in_top10pct": 0.141,
+   "people_in_top20pct": 0.272,
+   "within_customer_auc": 0.5645,
+   "customers": 13
+  }
+ ],
+ "tiers": {
+  "newest weeks, known customers": [
+   {
+    "tier": "P1",
+    "share": 0.0933,
+    "person_rate": 0.1193,
+    "dead_rate": 0.0633,
+    "lift_vs_list": 1.9158
+   },
+   {
+    "tier": "P2",
+    "share": 0.1868,
+    "person_rate": 0.0843,
+    "dead_rate": 0.0838,
+    "lift_vs_list": 1.3526
+   },
+   {
+    "tier": "P3",
+    "share": 0.6538,
+    "person_rate": 0.0527,
+    "dead_rate": 0.0812,
+    "lift_vs_list": 0.8458
+   },
+   {
+    "tier": "P4",
+    "share": 0.0662,
+    "person_rate": 0.0147,
+    "dead_rate": 0.8499,
+    "lift_vs_list": 0.2366
+   }
+  ],
+  "unseen customers": [
+   {
+    "tier": "P1",
+    "share": 0.0987,
+    "person_rate": 0.2053,
+    "dead_rate": 0.0178,
+    "lift_vs_list": 1.8877
+   },
+   {
+    "tier": "P2",
+    "share": 0.1977,
+    "person_rate": 0.1356,
+    "dead_rate": 0.0323,
+    "lift_vs_list": 1.247
+   },
+   {
+    "tier": "P3",
+    "share": 0.6925,
+    "person_rate": 0.0883,
+    "dead_rate": 0.0385,
+    "lift_vs_list": 0.8117
+   },
+   {
+    "tier": "P4",
+    "share": 0.0111,
+    "person_rate": 0.05,
+    "dead_rate": 0.7654,
+    "lift_vs_list": 0.4597
+   }
+  ],
+  "newest weeks, first dial": [
+   {
+    "tier": "P1",
+    "share": 0.0978,
+    "person_rate": 0.1105,
+    "dead_rate": 0.0648,
+    "lift_vs_list": 1.3399
+   },
+   {
+    "tier": "P2",
+    "share": 0.196,
+    "person_rate": 0.0974,
+    "dead_rate": 0.0839,
+    "lift_vs_list": 1.1813
+   },
+   {
+    "tier": "P3",
+    "share": 0.6861,
+    "person_rate": 0.0741,
+    "dead_rate": 0.1465,
+    "lift_vs_list": 0.8985
+   },
+   {
+    "tier": "P4",
+    "share": 0.0201,
+    "person_rate": 0.0859,
+    "dead_rate": 0.4013,
+    "lift_vs_list": 1.0414
+   }
+  ]
+ }
+}

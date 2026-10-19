@@ -1,0 +1,2 @@
+# LightGBM model files must keep LF line endings (CRLF breaks them)
+phone_intent/models/** -text
